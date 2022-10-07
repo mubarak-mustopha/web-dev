@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.page {
+  width: 375px;
+  margin: 20px auto;
+  padding: 0 40px;  /*Increase line length*/
+}
+
+.page section {
+  padding: 20px;
+}
+
+section h1,
+section p{
+  margin-bottom: 20px;
+}
