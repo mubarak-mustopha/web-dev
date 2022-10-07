@@ -4,18 +4,73 @@
   box-sizing: border-box;
 }
 
+body {
+    background-color: hsl(0, 0%, 95%);
+    font-size: 15px;
+    line-height: 1.8;/*space between lines of the same paragraph*/
+}
 
 .page {
   width: 375px;
   margin: 20px auto;
-  padding: 0 40px;  /*Increase line length*/
+  padding: 0 50px;  /*Increase line length of each sections(height basicaaly)*/
 }
 
 .page section {
-  padding: 20px;
+  padding: 40px;/*got it with this (Increase heigt of the paragrash)*/
+  width: 100%;
+}
+
+section p {
+  color: hsla(0, 0%, 100%, 0.75);
 }
 
 section h1,
 section p{
   margin-bottom: 20px;
+}
+
+section h1 {
+  color: hsl(0, 0%, 95%);
+}
+
+a {
+  display: block;
+}
+
+.button:link,
+.button:visited {
+  text-decoration: none;
+  text-align: center;
+
+  background-color: hsl(0, 0%, 95%);
+  width: 130px;
+  padding: 4px;
+  border-radius: 30px;
+}
+
+.sedans .button {
+  color: hsl(31, 77%, 52%);
+}
+
+.suvs .button{
+  color: hsl(184, 100%, 22%);
+}
+
+.luxury .button {
+  color: hsl(179, 100%, 13%);
+}
+
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 5px 5px 0 0;
+}
+
+.suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 0 5px 5px;
 }
