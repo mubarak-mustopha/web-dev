@@ -91,6 +91,58 @@ main.home::before {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/*menu styles*/
+.menu {
+    padding: 20px;
+    width: 900px;
+    height: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.menu img {
+    height: 300px;
+    width: 100%;
+}
+
+
+/*contact*/
+.contact {
+    width: 600px;
+    height: 100%;
+    padding: 0 50px;
+}
+
+.contact h1 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: .9rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.contact input {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+}
+
+.contact textarea {
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 20px;
+    padding: 12px;
+}
+
+.contact button {
+    margin-bottom: 60px;
+}
+
 /*footer styles*/
 
 footer {
