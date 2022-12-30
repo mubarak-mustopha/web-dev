@@ -1,6 +1,8 @@
 import createHeader from "./header";
 import createHomePage from "./home";
 import createFooter from "./footer";
+import createMenuPage from "./menu";
+import createContactPage from "./contact";
 import "./style.css";
 
 
@@ -15,7 +17,7 @@ let footer = createFooter();
 document.body.appendChild(header);
 
 //append to main
-main.appendChild(createHomePage(main));
+main.appendChild(createContactPage(main));
 
 //append main to dom
 document.body.appendChild(main)
