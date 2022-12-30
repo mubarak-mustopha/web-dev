@@ -90,3 +90,31 @@ main.home::before {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+/*footer styles*/
+
+footer {
+    padding: 10px 50px;
+    background-color: #ddc2ea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socials img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+button {
+    letter-spacing: 2px;
+    color: white;
+    background-color: black;
+    padding: 10px 15px;
+    box-shadow: none;
+}
+
+footer .author {
+    align-self: flex-end;
+}
