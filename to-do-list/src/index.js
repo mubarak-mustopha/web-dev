@@ -18,3 +18,11 @@ let toDOList = {
     work: [],
     grocery: [],
 }
+
+let addProject = (projName) => {
+    toDOList[projName] = [];
+}
+
+addProject("school");
+addProject("relationship");
+console.log(toDOList);
