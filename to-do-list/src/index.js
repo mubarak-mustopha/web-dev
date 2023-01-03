@@ -13,7 +13,7 @@ class Todo {
     }
 }
 
-let toDOList = {
+let projects = {
     personal: [],
     work: [],
     grocery: [],
