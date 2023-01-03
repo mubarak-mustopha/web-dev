@@ -56,7 +56,7 @@ addTodo("relationship", stayHalal);
 addTodo("relationship", keepItReal);
 
 markAsDone("school", 0)
-deleteToDo(0, "relationship")
+//deleteToDo(0, "relationship")
 editTodo(createTodo("study", new Date("2023-02-11"), 5), "school", 0)
 
 //console.log(projects.school);

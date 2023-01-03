@@ -27,7 +27,8 @@ h1 {
     font-size: 1rem;
 }
 
-.project {
+.project,
+.form {
     width: 300px;
     height: 300px;
     background-color: white;
@@ -41,4 +42,107 @@ h1 {
 
 .project:hover {
     transform: translateY(-6px);
+}
+
+/*project containers page*/
+/*proj container header*/
+.container header {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.add-todo {
+    background-color: #0066ff;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    justify-self: end;
+}
+
+/*proj container main*/
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+
+
+ul .to-do {
+    display: grid;
+    justify-content: space-between;
+    justify-items: end;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 8px;
+
+}
+
+ul .to-do:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.to-do form {
+    justify-self: start;
+}
+
+.to-do .delete {
+    cursor: pointer;
+    background-color: red;
+    padding: 3px;
+    color: white;
+}
+
+/*form */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 200px;
+    height: auto;
+    padding: 10px 0;
+    cursor: default;
+    align-items: center;
+    transform: translateX(-250px);
+    transition: transform 0.1s ease-in;
+}
+
+.form.slide {
+    transform: translateX(0);
+}
+
+.form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+.form-row label {
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 4px;
+}
+
+.form-row>* {
+    display: block;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+    border: none;
 }
