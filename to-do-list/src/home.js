@@ -1,4 +1,5 @@
 import todoApp from "./index";
+import "./style.css";
 
 let projects = todoApp.projects;
 
