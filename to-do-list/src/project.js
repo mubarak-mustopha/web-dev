@@ -28,6 +28,10 @@ let createTodoListItem = (todoObj, index) => {
     return todoListItem;
 }
 
+let displayTodo = (todoObj) => {
+    
+}
+
 let removeTodo = (project, todoListItem) => {
     let index = todoListItem.dataset.index;
     todoApp.deleteToDo(index, project.id);

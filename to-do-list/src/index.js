@@ -1,6 +1,6 @@
 class Todo {
-    constructor(title, dueDate, priority) {
-        this.title = title
+    constructor(task, dueDate, priority) {
+        this.task = task
         this.dueDate = dueDate
         this.isChecked = false;
         this.priority = priority

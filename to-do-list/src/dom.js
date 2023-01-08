@@ -4,17 +4,28 @@ import displayProject from "./project";
 import createForm from "./form";
 import { displayForm, getFormValues } from "./form";
 import { createTodoListItem, removeTodo } from "./project";
+import { addToProjContainer } from "./home";
 
-document.body.appendChild(createForm());
-displayHomePage();
+
+
 
 let container = document.querySelector(".container")
+
+let form = createForm();
+document.body.appendChild(form)
+
+displayHomePage();
 
 container.addEventListener("click", (e) => {
     let classList = e.target.classList;
     let project = document.querySelector("ul");
     if (classList.contains("project")) {
         displayProject(e);
+    } else if (classList.contains("add-project")) {
+        let newProj = prompt("Type In project Name");
+        todoApp.addProject(newProj);
+        addToProjContainer(newProj);
+
     } else if (classList.contains("arrow")) {
         displayHomePage();
     } else if (classList.contains("add-todo")) {
