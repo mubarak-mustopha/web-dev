@@ -1,5 +1,6 @@
 import todoApp from "./index";
 import Arrow from "./images/left-arrow.png";
+import DotIcon from "./images/dots.png";
 import "./style.css";
 
 //let projects = todoApp.projects;
@@ -7,7 +8,13 @@ import "./style.css";
 let createHeader = (projName) => {
     let header = document.createElement("header");
     let headerContent = `<div ><img class="arrow" src=${Arrow} alt=""></div>
-                <h2 class="project-name">${projName}</h2><div class="add-todo">+</div>`;
+                <h2 class="project-name">${projName}</h2>
+                <div class="proj-nav"><img class="arrow" src=${DotIcon} alt="">
+                    <ul>
+                        <li class="add-todo">Add To Project</li>
+                        <li class="delete-proj">Delete Project</li>
+                    <ul>
+                </div>`;
 
     header.innerHTML = headerContent;
     return header;
@@ -33,9 +40,9 @@ let createTodoListItem = (todoObj, index) => {
 }
 
 
-let removeTodo = (project, todoListItem) => {
+let removeTodo = (projects, project, todoListItem) => {
     let index = todoListItem.dataset.index;
-    todoApp.deleteToDo(index, project.id);
+    todoApp.deleteToDo(projects, index, project.id);
     project.removeChild(todoListItem)
 
 }

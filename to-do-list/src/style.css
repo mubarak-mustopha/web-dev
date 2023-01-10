@@ -78,12 +78,52 @@ h1 {
     margin-bottom: 30px;
 }
 
-.add-todo {
+/*.add-todo {
     background-color: #0066ff;
     color: white;
     cursor: pointer;
     padding: 5px;
     justify-self: end;
+}*/
+.proj-nav {
+    justify-self: end;
+    align-self: end;
+    position: relative;
+}
+
+.proj-nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    min-width: 110px;
+    font-size: 14px;
+
+
+    font-weight: lighter;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform .1s ease-in;
+
+    background-color: #0066ff;
+    color: white;
+    list-style-type: none;
+}
+
+.proj-nav:hover ul {
+    transform: scale(1);
+}
+
+.proj-nav li {
+    margin: 8px;
+    cursor: pointer;
+}
+
+.proj-nav li:hover {
+    color: #BEB7A4;
 }
 
 /*proj container main*/
