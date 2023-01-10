@@ -1,19 +1,18 @@
-import todoApp from "./index";
 import "./style.css";
 
-let projects = todoApp.projects;
 
-let createCountDiv = (project) => {//project name: arg
+
+let createCountDiv = (numTodo) => {//project name: arg
     let countDiv = document.createElement("div");
     countDiv.classList.add("count");
-    countDiv.textContent = projects[project].length;
+    countDiv.textContent = numTodo;
     return countDiv;
 }
 
-let createProjectDiv = (project) => {//project name: arg
+let createProjectDiv = (project, numTodo) => {//project name: arg
     let projectDiv = document.createElement("div");
 
-    let countDiv = createCountDiv(project);
+    let countDiv = createCountDiv(numTodo);
     projectDiv.appendChild(countDiv);
 
     let projDivText = document.createElement("div");
@@ -28,13 +27,13 @@ let createProjectDiv = (project) => {//project name: arg
 
 let addToProjContainer = (project) => {//project name: arg
     let projectContainer = document.querySelector(".projects");
-    let projDiv = createProjectDiv(project);
+    let projDiv = createProjectDiv(project, 0);
     let addProjectDiv = document.querySelector(".add-project");
     projectContainer.insertBefore(projDiv, addProjectDiv);
 }
 
 
-export default function displayHomePage() {
+export default function displayHomePage(projects) {
     let heading = document.createElement("h1");
     heading.textContent = "TO DO LIST"
 
@@ -47,7 +46,8 @@ export default function displayHomePage() {
     projectContainer.appendChild(addProjectDiv);
 
     for (const project in projects) {
-        projectContainer.insertBefore(createProjectDiv(project), addProjectDiv)
+        projectContainer.insertBefore(createProjectDiv(project, projects[project].length
+        ), addProjectDiv)
     }
 
 
@@ -57,9 +57,7 @@ export default function displayHomePage() {
     container.appendChild(heading);
     container.appendChild(projectContainer);
     console.log(projectContainer.children);
-    //    for (let project of projectContainer.children) {
-    //        project.addEventListener("click", (e) => displayProject(e))
-    //    }
+
 }
 
 export { addToProjContainer }
